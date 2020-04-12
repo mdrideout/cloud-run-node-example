@@ -1,0 +1,26 @@
+{
+  "name": "cloud-run-node-example",
+  "version": "1.0.0",
+  "description": "Just an example of a node based cloud run app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "serve:dev": "docker-compose -f dev.yaml up",
+    "gcloud:build": "gcloud builds submit --tag gcr.io/strict-chef/cloud-run-node-example",
+    "gcloud:deploy": "gcloud run deploy --image gcr.io/strict-chef/cloud-run-node-example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdrideout/cloud-run-node-example.git"
+  },
+  "author": "Matthew Rideout",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/mdrideout/cloud-run-node-example/issues"
+  },
+  "homepage": "https://github.com/mdrideout/cloud-run-node-example#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
